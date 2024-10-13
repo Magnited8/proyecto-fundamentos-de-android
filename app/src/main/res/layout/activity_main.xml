@@ -1,0 +1,46 @@
+<!-- res/layout/activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Barra superior con el menú -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Foto de perfil del usuario -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_user" />
+
+    <!-- Nombre del usuario -->
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:text="Ronny"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- GridView de imágenes -->
+    <GridView
+        android:id="@+id/gallery_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginTop="20dp"
+        android:numColumns="3"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:gravity="center" />
+
+</RelativeLayout>
